@@ -1,0 +1,22 @@
+[
+  { "query": "build an MCP server in typescript so Claude can look up customer orders from our database", "should_trigger": true, "split": "train" },
+  { "query": "our MCP server has 40 tools, one per REST endpoint, and the model keeps picking the wrong one", "should_trigger": true, "split": "train" },
+  { "query": "the stdio MCP server breaks as soon as we add logging, the client says invalid JSON", "should_trigger": true, "split": "train" },
+  { "query": "should our MCP server use stdio or streamable HTTP if the whole team will share one deployment", "should_trigger": true, "split": "train" },
+  { "query": "how should an MCP tool report that a record was not found so the model can recover", "should_trigger": true, "split": "train" },
+  { "query": "expose our existing node billing service to AI agents through MCP without duplicating the logic", "should_trigger": true, "split": "train" },
+  { "query": "review the zod input schemas on our MCP tools, some take a free-form query string", "should_trigger": true, "split": "validation" },
+  { "query": "add auth to our remote MCP server so each user only sees their own tickets", "should_trigger": true, "split": "validation" },
+  { "query": "write tests for our MCP server's tools using an in-memory client", "should_trigger": true, "split": "validation" },
+  { "query": "should this read-only report be an MCP resource or a tool", "should_trigger": true, "split": "validation" },
+  { "query": "design the REST endpoints for our ticketing API, urls and status codes", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "add a tickets module to our nestjs app with repository and service", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "refactor our express app into controller, service and repository layers", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "write a Claude agent skill that teaches code review", "should_trigger": false, "split": "train" },
+  { "query": "call the Claude API from our backend to summarise support tickets", "should_trigger": false, "split": "train" },
+  { "query": "how do I add an MCP server to my Claude Code config", "should_trigger": false, "split": "train" },
+  { "query": "define one error envelope for every endpoint of our public API", "should_trigger": false, "belongs_to": "api-design", "split": "validation" },
+  { "query": "our nest services throw HttpException everywhere, move to domain errors", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" },
+  { "query": "set up graceful shutdown and health checks for our fastify service", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "validation" },
+  { "query": "which MCP servers exist for querying Postgres", "should_trigger": false, "split": "validation" }
+]

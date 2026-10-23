@@ -1,0 +1,22 @@
+[
+  { "query": "design the endpoints for a new public bookings API: urls, methods and what each returns", "should_trigger": true, "split": "train" },
+  { "query": "should our order list endpoint use cursor or offset pagination and what goes in the response", "should_trigger": true, "split": "train" },
+  { "query": "which status code for a duplicate email on signup, 409 or 422, and how do we stay consistent", "should_trigger": true, "split": "train" },
+  { "query": "every endpoint returns errors in a different shape, define one error format for the whole API", "should_trigger": true, "split": "train" },
+  { "query": "we need to rename a response field clients already use, how do we do it without breaking them", "should_trigger": true, "split": "train" },
+  { "query": "review these endpoint names: POST /getUserOrders and GET /deleteItem", "should_trigger": true, "split": "train" },
+  { "query": "clients retry the create-payment call on timeout and we get double charges, what should the API contract be", "should_trigger": true, "split": "validation" },
+  { "query": "plan how we deprecate v1 of the shipments API and roll out v2", "should_trigger": true, "split": "validation" },
+  { "query": "how should filtering and sorting query params look on our products search endpoint", "should_trigger": true, "split": "validation" },
+  { "query": "two admins editing the same record overwrite each other, how should the API prevent lost updates", "should_trigger": true, "split": "validation" },
+  { "query": "write the nest exception filter that maps our domain errors to http responses", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "implement cursor pagination in the prisma repository of our nest orders module", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "our express error middleware swallows async errors, fix it", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "move the SQL out of our fastify route handlers into a repository layer", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "how should we name and describe the tools on our MCP server so the model picks the right one", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "train" },
+  { "query": "write a GraphQL schema for our blog with posts and comments", "should_trigger": false, "split": "train" },
+  { "query": "add zod validation to the request bodies in our hono app", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "validation" },
+  { "query": "set up the global ValidationPipe and DTOs for the nest users controller", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" },
+  { "query": "should our MCP server use stdio or streamable http for a shared team deployment", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "validation" },
+  { "query": "what does the HTTP 418 status code mean", "should_trigger": false, "split": "validation" }
+]

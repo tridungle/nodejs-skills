@@ -1,0 +1,22 @@
+[
+  { "query": "our express route handlers are 200 lines each with SQL inline, split them into controller, service and repository", "should_trigger": true, "split": "train" },
+  { "query": "set up a strict tsconfig and ESM for a new fastify service on the current node LTS", "should_trigger": true, "split": "train" },
+  { "query": "async errors in our express 4 app never reach the error middleware and the request just hangs", "should_trigger": true, "split": "train" },
+  { "query": "how do I do dependency injection in a plain node typescript service without adding a DI container", "should_trigger": true, "split": "train" },
+  { "query": "validate env vars at startup in our koa service so it refuses to boot when DATABASE_URL is missing", "should_trigger": true, "split": "train" },
+  { "query": "review this hono service for layering problems, the service file imports the context object", "should_trigger": true, "split": "train" },
+  { "query": "add graceful shutdown to our node worker so SIGTERM closes the pg pool cleanly", "should_trigger": true, "split": "validation" },
+  { "query": "our services import a db singleton directly and tests need jest.mock everywhere, fix the design", "should_trigger": true, "split": "validation" },
+  { "query": "replace the req.body as CreateUser casts in our express controllers with real validation", "should_trigger": true, "split": "validation" },
+  { "query": "set up typed error classes and one error handler for our fastify api", "should_trigger": true, "split": "validation" },
+  { "query": "create a nest module for subscriptions with its own repository and DTOs", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "our nestjs ValidationPipe is not stripping unknown fields from the body", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "design the URL structure and methods for a new public bookings API", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "what error envelope should every endpoint of our public API return", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "write an MCP server so Claude can query our inventory database", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "train" },
+  { "query": "fix the flexbox layout on the settings page in our next.js app", "should_trigger": false, "split": "train" },
+  { "query": "nest e2e tests start the real database, how do I override providers in the testing module", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" },
+  { "query": "should we version our REST API in the path or in a header", "should_trigger": false, "belongs_to": "api-design", "split": "validation" },
+  { "query": "our MCP tool descriptions are vague and the model keeps calling the wrong tool", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "validation" },
+  { "query": "explain what a javascript closure is", "should_trigger": false, "split": "validation" }
+]

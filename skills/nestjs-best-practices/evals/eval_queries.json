@@ -1,0 +1,22 @@
+[
+  { "query": "add an invoices module to our nest app with controller, service and a repository over prisma", "should_trigger": true, "split": "train" },
+  { "query": "our OrdersController injects PrismaService directly and does the queries itself, refactor it properly", "should_trigger": true, "split": "train" },
+  { "query": "nest is throwing a circular dependency error between UsersModule and AuthModule, we used forwardRef but it feels wrong", "should_trigger": true, "split": "train" },
+  { "query": "set up a global exception filter in nestjs so every error comes back in the same shape", "should_trigger": true, "split": "train" },
+  { "query": "the ValidationPipe lets extra fields like isAdmin through on the signup DTO, how should it be configured", "should_trigger": true, "split": "train" },
+  { "query": "review this nest service, it throws NotFoundException from inside the repository class", "should_trigger": true, "split": "train" },
+  { "query": "how should I wrap two typeorm writes in a transaction from a nest service without leaking the datasource everywhere", "should_trigger": true, "split": "validation" },
+  { "query": "write unit tests for PaymentsService in nest with the repository faked out", "should_trigger": true, "split": "validation" },
+  { "query": "should my tenant context provider be request scoped in nestjs or is there a better way", "should_trigger": true, "split": "validation" },
+  { "query": "our nest controllers return the TypeORM entity directly and the password hash leaks in the response", "should_trigger": true, "split": "validation" },
+  { "query": "refactor our express routes so the handlers stop running SQL directly, move it into services and repositories", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "set up a strict tsconfig for a new fastify service using ESM", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "should our list endpoints use cursor or offset pagination, and what should the response look like", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "which status code for a duplicate email on signup, 409 or 422", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "expose our order lookup as an MCP tool so the support agent in Claude can call it", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "train" },
+  { "query": "convert this React form component to use react-hook-form", "should_trigger": false, "split": "train" },
+  { "query": "our hono app has no graceful shutdown and drops requests on deploy", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "validation" },
+  { "query": "plan how we deprecate the v1 orders endpoint and introduce v2", "should_trigger": false, "belongs_to": "api-design", "split": "validation" },
+  { "query": "build a stdio MCP server in typescript that wraps our internal search API", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "validation" },
+  { "query": "what is the difference between npm ci and npm install", "should_trigger": false, "split": "validation" }
+]
