@@ -1,0 +1,22 @@
+[
+  { "query": "add an endpoint to our nest app that summarises a support ticket with an LLM and streams the answer back", "should_trigger": true, "split": "train" },
+  { "query": "our express service calls the openai sdk straight from the route handler, restructure it properly", "should_trigger": true, "split": "train" },
+  { "query": "the model sometimes returns broken JSON and our order classifier crashes, how should we handle structured output", "should_trigger": true, "split": "train" },
+  { "query": "build RAG over our help-center articles with pgvector so answers cite their sources", "should_trigger": true, "split": "train" },
+  { "query": "our LLM bill tripled last month, find ways to cut token cost in the backend", "should_trigger": true, "split": "train" },
+  { "query": "let the model call our refund and lookup functions safely from the chat backend", "should_trigger": true, "split": "train" },
+  { "query": "how do we test prompt changes before deploying so the extraction quality does not silently drop", "should_trigger": true, "split": "validation" },
+  { "query": "users can make our AI assistant ignore its instructions by pasting text, harden the backend", "should_trigger": true, "split": "validation" },
+  { "query": "when the client closes the tab the LLM stream keeps running and we keep paying, fix it in fastify", "should_trigger": true, "split": "validation" },
+  { "query": "we want to switch LLM providers later without rewriting our services, how should the code be structured", "should_trigger": true, "split": "validation" },
+  { "query": "build an MCP server so Claude Desktop can query our orders database", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "train" },
+  { "query": "our MCP tool descriptions are vague and agents pick the wrong tool", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "train" },
+  { "query": "add a products module to our nest app with repository, service and controller", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "add timeouts and retries to our node service's calls to the payment provider", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "design the status codes and error format for our public bookings API", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "write a catchy product description for our new running shoes", "should_trigger": false, "split": "train" },
+  { "query": "add TSDoc comments to the summarisation service methods", "should_trigger": false, "belongs_to": "code-comments", "split": "validation" },
+  { "query": "should our MCP server run over stdio or streamable HTTP", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "validation" },
+  { "query": "set up the global ValidationPipe for our nest DTOs", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" },
+  { "query": "explain what a transformer neural network is in simple terms", "should_trigger": false, "split": "validation" }
+]

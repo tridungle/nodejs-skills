@@ -8,7 +8,7 @@ metadata:
 
 # MCP Server (TypeScript)
 
-Build an MCP server whose tools an agent picks correctly, calls with valid input, and recovers from when they fail — with the same Model-Controller-Service-Repository layering as the rest of a Node codebase.
+Build an MCP server whose tools an agent picks correctly, calls with valid input, and recovers from when they fail — with the same Model-Controller-Service-Repository layering as the rest of a Node codebase. A backend calling a model itself is `llm-integration-typescript`.
 
 ## Cost rules
 

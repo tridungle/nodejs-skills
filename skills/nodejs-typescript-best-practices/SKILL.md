@@ -80,6 +80,7 @@ Factory functions returning objects (`createOrderService(deps)`) are equally fin
 
 | Task | Read |
 |---|---|
+| Build a new CRUD resource end to end, step by step | [crud-feature.md](references/crud-feature.md) |
 | Layer boundaries, composition root, framework mapping, repositories, transactions | [architecture.md](references/architecture.md) |
 | `tsconfig`, ESM vs CommonJS, type patterns, linting | [typescript.md](references/typescript.md) |
 | Error classes, error middleware, async pitfalls, process handlers | [errors-async.md](references/errors-async.md) |
@@ -87,7 +88,7 @@ Factory functions returning objects (`createOrderService(deps)`) are equally fin
 | Unit, integration and HTTP tests | [testing.md](references/testing.md) |
 | Logging, shutdown, health, security headers, performance | [production.md](references/production.md) |
 
-URL design, status codes, the error envelope and pagination format belong to the `api-design` skill when installed. Comments and TSDoc follow the `code-comments` skill when installed.
+URL design, status codes, the error envelope and pagination format belong to the `api-design` skill when installed. Comments and TSDoc follow the `code-comments` skill, and calls to an LLM follow `llm-integration-typescript`, when installed.
 
 ## Other frameworks
 

@@ -115,6 +115,7 @@ Middleware → guards → interceptors (before) → pipes → handler → interc
 
 | Task | Read |
 |---|---|
+| Build a new CRUD resource end to end, step by step | [crud-feature.md](references/crud-feature.md) |
 | New module, layer boundaries, cycles, DI scopes, cross-module calls, events | [architecture.md](references/architecture.md) |
 | DTOs, `ValidationPipe`, query params, response serialization, OpenAPI decorators | [validation-dtos.md](references/validation-dtos.md) |
 | Domain errors, exception filter, error envelope, logging failures | [errors.md](references/errors.md) |
@@ -123,7 +124,7 @@ Middleware → guards → interceptors (before) → pipes → handler → interc
 | Unit, integration and e2e tests | [testing.md](references/testing.md) |
 | Caching, health checks, shutdown, logging, queues, performance | [operations.md](references/operations.md) |
 
-The HTTP contract itself — URL naming, status codes, pagination format, versioning — is decided by the `api-design` skill when it is installed; this skill implements whatever contract it settles. Comments and TSDoc follow the `code-comments` skill when installed.
+The HTTP contract itself — URL naming, status codes, pagination format, versioning — is decided by the `api-design` skill when it is installed; this skill implements whatever contract it settles. Comments and TSDoc follow the `code-comments` skill, and calls to an LLM follow `llm-integration-typescript`, when installed.
 
 ## Other frameworks
 
