@@ -1,6 +1,6 @@
 ---
 name: postgres-database
-description: "Designs and tunes PostgreSQL behind a TypeScript repository layer: schema and types, constraints, indexes, zero-downtime migrations, EXPLAIN-driven query tuning, locking and isolation, connection pooling, row-level security. Use when changing a Postgres schema or diagnosing database performance."
+description: "Designs and tunes PostgreSQL for TypeScript backends: schema and types, constraints, indexes, zero-downtime migrations, EXPLAIN-driven query tuning, locking and isolation, connection pooling, row-level security. Use when changing a Postgres schema or diagnosing database performance."
 license: MIT
 metadata:
   tags: ["postgres", "postgresql", "database", "sql", "migrations", "performance"]

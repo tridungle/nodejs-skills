@@ -18,5 +18,6 @@
   { "query": "the LLM summary endpoint keeps streaming after the client disconnects", "should_trigger": false, "belongs_to": "llm-integration-typescript", "split": "validation" },
   { "query": "set up the global ValidationPipe so unknown fields are rejected", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" },
   { "query": "expose our order search as a tool for Claude through MCP", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "validation" },
-  { "query": "estimate how many story points this epic is for sprint planning", "should_trigger": false, "split": "validation" }
+  { "query": "estimate how many story points this epic is for sprint planning", "should_trigger": false, "split": "validation" },
+  { "query": "add an optional notes field to the nest order DTO and entity", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" }
 ]

@@ -18,5 +18,6 @@
   { "query": "define one error envelope for every endpoint of our public API", "should_trigger": false, "belongs_to": "api-design", "split": "validation" },
   { "query": "our nest services throw HttpException everywhere, move to domain errors", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" },
   { "query": "set up graceful shutdown and health checks for our fastify service", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "validation" },
-  { "query": "which MCP servers exist for querying Postgres", "should_trigger": false, "split": "validation" }
+  { "query": "which MCP servers exist for querying Postgres", "should_trigger": false, "split": "validation" },
+  { "query": "let our backend's chat feature call internal pricing functions through model tool calling", "should_trigger": false, "belongs_to": "llm-integration-typescript", "split": "validation" }
 ]

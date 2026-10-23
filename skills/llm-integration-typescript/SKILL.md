@@ -1,6 +1,6 @@
 ---
 name: llm-integration-typescript
-description: "Integrates LLM APIs into Node.js/NestJS TypeScript backends: provider gateway behind services, prompts as code, structured output, streaming, timeouts and retries, token and cost budgets, RAG, prompt-injection defence, eval tests. Use when adding or reviewing LLM-powered backend features."
+description: "Integrates LLM APIs into Node.js/NestJS TypeScript backends: provider gateway, prompts as code, structured output, streaming, tool calling from your own code, retries, token and cost budgets, RAG, prompt-injection defence, evals. Use when your backend calls a model."
 license: MIT
 metadata:
   tags: ["llm", "ai", "typescript", "nodejs", "nestjs", "rag"]

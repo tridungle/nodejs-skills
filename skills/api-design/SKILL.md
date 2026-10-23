@@ -1,6 +1,6 @@
 ---
 name: api-design
-description: "Designs and reviews HTTP/REST API contracts: resource URLs, methods, status codes, one error envelope, pagination, filtering, versioning, idempotency, rate limits, OpenAPI. Use when shaping or reviewing endpoints as a contract, apart from how a framework implements them."
+description: "Designs and reviews HTTP/REST API contracts and their OpenAPI documentation: resource URLs, methods, status codes, one error envelope, pagination, filtering, versioning, idempotency, rate limits. Use when shaping, documenting or reviewing endpoints as a contract, apart from the framework code."
 license: MIT
 metadata:
   tags: ["api", "rest", "http", "openapi", "contract"]

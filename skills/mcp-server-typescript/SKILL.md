@@ -1,6 +1,6 @@
 ---
 name: mcp-server-typescript
-description: "Builds and reviews Model Context Protocol (MCP) servers in TypeScript: tool, resource and prompt design, Zod input schemas, tool errors, stdio vs Streamable HTTP transport, auth, testing. Use when creating an MCP server or exposing an existing Node service to AI agents through MCP."
+description: "Builds and reviews Model Context Protocol (MCP) servers in TypeScript: tool, resource and prompt design, Zod input schemas, tool errors, stdio vs Streamable HTTP, auth, testing. Use when exposing a service to AI clients such as Claude or IDE agents through MCP."
 license: MIT
 metadata:
   tags: ["mcp", "typescript", "nodejs", "ai-agents", "tools"]

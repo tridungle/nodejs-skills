@@ -1,6 +1,6 @@
 ---
 name: feature-workflow
-description: "Delivers a feature from ticket, user story or spec to a verified, reviewable change in a TypeScript backend: size the work, ask only design-changing questions, plan by layer, write tests first, build inside-out, verify, self-review, hand off. Use when implementing a ticket or feature end to end."
+description: "Delivers a ticket, user story or spec as a verified, reviewable change in a TypeScript backend: sizing, design-changing questions only, plan by layer, tests first, build inside-out, verify, self-review, hand-off. Use when given a requirement to implement end to end, not for a single code edit."
 license: MIT
 metadata:
   tags: ["workflow", "planning", "tdd", "feature", "typescript", "backend"]

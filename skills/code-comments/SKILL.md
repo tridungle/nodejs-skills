@@ -1,6 +1,6 @@
 ---
 name: code-comments
-description: "Writes and reviews code comments and TSDoc/JSDoc in TypeScript and JavaScript: when a comment earns its place, why over what, doc blocks on public APIs, @throws/@deprecated, TODO hygiene, removing stale or noise comments. Use when adding, auditing or cleaning up comments or doc blocks."
+description: "Writes and reviews code comments and TSDoc/JSDoc in TypeScript and JavaScript: when a comment earns its place, why over what, doc blocks on exported functions and classes, @throws/@deprecated, TODO hygiene, stale or noise comments. Not HTTP API docs. Use when adding or cleaning up comments."
 license: MIT
 metadata:
   tags: ["comments", "tsdoc", "jsdoc", "typescript", "documentation"]
