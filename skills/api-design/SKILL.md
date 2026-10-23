@@ -14,7 +14,7 @@ Decide the contract a client sees — URLs, methods, status codes, bodies, error
 
 - **Follow the existing API first.** If the service already has a convention (snake_case vs camelCase, envelope shape, 400 vs 422), new endpoints match it; list deviations instead of rewriting them.
 - **Answer the question asked.** A single-endpoint question gets a decision and its reason, not a full style guide.
-- **Open a reference only when the task reaches it**: [pagination-filtering.md](references/pagination-filtering.md) for list endpoints, [evolution.md](references/evolution.md) for versioning, idempotency, rate limits and OpenAPI.
+- **Open a reference only when the task reaches it**: [pagination-filtering.md](references/pagination-filtering.md) for list endpoints, [evolution.md](references/evolution.md) for versioning, idempotency and rate limits, [api-docs.md](references/api-docs.md) for writing or generating OpenAPI documentation.
 
 ## Resources and URLs
 
@@ -106,7 +106,7 @@ Report each as pass or fail with the endpoint that proves it.
 - [ ] Field naming case consistent across all endpoints
 - [ ] Retryable `POST`s accept `Idempotency-Key`
 - [ ] Breaking changes identified and versioned (see [evolution.md](references/evolution.md))
-- [ ] Contract documented in OpenAPI (or the project's equivalent) and matches the implementation
+- [ ] Contract documented in OpenAPI (or the project's equivalent) and matches the implementation (see [api-docs.md](references/api-docs.md))
 
 ## Anti-patterns
 

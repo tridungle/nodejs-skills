@@ -123,7 +123,7 @@ Middleware → guards → interceptors (before) → pipes → handler → interc
 | Unit, integration and e2e tests | [testing.md](references/testing.md) |
 | Caching, health checks, shutdown, logging, queues, performance | [operations.md](references/operations.md) |
 
-The HTTP contract itself — URL naming, status codes, pagination format, versioning — is decided by the `api-design` skill when it is installed; this skill implements whatever contract it settles.
+The HTTP contract itself — URL naming, status codes, pagination format, versioning — is decided by the `api-design` skill when it is installed; this skill implements whatever contract it settles. Comments and TSDoc follow the `code-comments` skill when installed.
 
 ## Other frameworks
 

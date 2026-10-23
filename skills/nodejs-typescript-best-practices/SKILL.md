@@ -87,7 +87,7 @@ Factory functions returning objects (`createOrderService(deps)`) are equally fin
 | Unit, integration and HTTP tests | [testing.md](references/testing.md) |
 | Logging, shutdown, health, security headers, performance | [production.md](references/production.md) |
 
-URL design, status codes, the error envelope and pagination format belong to the `api-design` skill when installed.
+URL design, status codes, the error envelope and pagination format belong to the `api-design` skill when installed. Comments and TSDoc follow the `code-comments` skill when installed.
 
 ## Other frameworks
 

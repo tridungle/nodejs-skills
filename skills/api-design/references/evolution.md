@@ -55,7 +55,4 @@ Return 202 with `Location: /operations/{id}`; the operation resource reports `st
 
 ## Documentation
 
-- The contract lives in an OpenAPI 3.x document (generated from code or written first — follow the project) and is the reviewable artifact for API changes.
-- Every operation documents: success schema, each error status it can return with the shared error schema, auth requirement, pagination parameters.
-- Examples use invented placeholder data.
-- A contract diff check in CI (comparing OpenAPI documents) catches accidental breaking changes, if the project already runs one; suggest it, do not add tooling unasked.
+The OpenAPI document is how a contract change becomes reviewable. Writing it, generating it per framework, and keeping it in step with the code are covered in [api-docs.md](api-docs.md).

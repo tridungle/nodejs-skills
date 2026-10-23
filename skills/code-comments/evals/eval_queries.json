@@ -1,0 +1,22 @@
+[
+  { "query": "add TSDoc to the public methods of our OrderService, especially which errors each one throws", "should_trigger": true, "split": "train" },
+  { "query": "half the comments in this file describe code that was rewritten months ago, clean them up", "should_trigger": true, "split": "train" },
+  { "query": "our codebase has comments like '// increment i' everywhere, what should a comment actually say", "should_trigger": true, "split": "train" },
+  { "query": "review the comments and JSDoc in this pull request and tell me what is wrong or missing", "should_trigger": true, "split": "train" },
+  { "query": "there are dozens of bare TODO: fix this comments, define a rule for TODOs and apply it", "should_trigger": true, "split": "train" },
+  { "query": "document the repository interface so callers know whether findById returns null or throws", "should_trigger": true, "split": "train" },
+  { "query": "mark the old calculateTotal function deprecated properly so editors point people to the new one", "should_trigger": true, "split": "validation" },
+  { "query": "this regex and the retry workaround have no explanation, add comments a new teammate would need", "should_trigger": true, "split": "validation" },
+  { "query": "should we keep the commented-out code blocks in the billing module or delete them", "should_trigger": true, "split": "validation" },
+  { "query": "write JSDoc for the exported helpers in our plain javascript utils file", "should_trigger": true, "split": "validation" },
+  { "query": "generate an OpenAPI spec for our fastify routes with every error response documented", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "add swagger docs to the nest orders controller", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "refactor our nest orders module so the controller stops querying prisma directly", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "turn on strict mode and noUncheckedIndexedAccess in our node service tsconfig", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "our MCP tool descriptions are vague and the model picks the wrong tool, rewrite them", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "train" },
+  { "query": "write a README for this repository with install and usage sections", "should_trigger": false, "split": "train" },
+  { "query": "keep our OpenAPI document in sync with the implementation and fail CI when they drift", "should_trigger": false, "belongs_to": "api-design", "split": "validation" },
+  { "query": "add typed error classes and one error handler to our express app", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "validation" },
+  { "query": "write a commit message for these staged changes", "should_trigger": false, "split": "validation" },
+  { "query": "set up eslint and prettier for our typescript monorepo", "should_trigger": false, "split": "validation" }
+]
