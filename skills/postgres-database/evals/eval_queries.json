@@ -1,0 +1,22 @@
+[
+  { "query": "we need to rename the users.fullname column in postgres without taking the API down", "should_trigger": true, "split": "train" },
+  { "query": "this orders list query takes 4 seconds, here is the EXPLAIN ANALYZE output, what index do we need", "should_trigger": true, "split": "train" },
+  { "query": "design the postgres tables for invoices and invoice lines with proper types and constraints", "should_trigger": true, "split": "train" },
+  { "query": "our prisma migration adding an index locked the products table in production for minutes", "should_trigger": true, "split": "train" },
+  { "query": "two requests decrement the same stock count and we oversell, fix it at the database level", "should_trigger": true, "split": "train" },
+  { "query": "we get 'too many connections' from postgres after scaling to 30 pods", "should_trigger": true, "split": "train" },
+  { "query": "set up row-level security so one tenant can never read another tenant's rows", "should_trigger": true, "split": "validation" },
+  { "query": "should we use a postgres enum type or a check constraint for order status", "should_trigger": true, "split": "validation" },
+  { "query": "use postgres as a job queue with multiple workers without them picking the same job", "should_trigger": true, "split": "validation" },
+  { "query": "add a NOT NULL column to a 200 million row table safely", "should_trigger": true, "split": "validation" },
+  { "query": "move the prisma calls out of our nest controller into a repository class", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "wire a db pool into our express app's composition root and inject repositories into services", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "what should the pagination response look like for our public list endpoints", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "build retrieval over our docs so the chatbot answers with citations", "should_trigger": false, "belongs_to": "llm-integration-typescript", "split": "train" },
+  { "query": "optimise this mongodb aggregation pipeline that groups orders by customer", "should_trigger": false, "split": "train" },
+  { "query": "add TSDoc to the repository methods saying whether they return null or throw", "should_trigger": false, "belongs_to": "code-comments", "split": "train" },
+  { "query": "write unit tests for the nest orders service with a fake repository", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" },
+  { "query": "expose our customer lookup to Claude as an MCP tool", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "validation" },
+  { "query": "set up redis caching for our product catalogue endpoint", "should_trigger": false, "split": "validation" },
+  { "query": "how do I write a SQL query to get the second highest salary for an interview", "should_trigger": false, "split": "validation" }
+]

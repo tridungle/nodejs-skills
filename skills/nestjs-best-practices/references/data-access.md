@@ -33,6 +33,8 @@ Rules either way:
 
 ## Query performance
 
+On PostgreSQL, the `postgres-database` skill (when installed) covers query plans, index choice, zero-downtime migrations, locking and pool sizing in depth.
+
 - **N+1**: a loop calling the repository per item. Replace with one `findManyByIds(ids)` or an ORM include/join. Check by enabling query logging in a test and counting statements for a list of N items.
 - **Select what is used**: list endpoints select the columns the response DTO needs, not `SELECT *` with large text/JSON columns.
 - **Every list is paginated** with a hard maximum page size (e.g. 100). Prefer cursor (keyset) pagination for large or append-heavy tables; offset is fine below roughly ten thousand rows.
