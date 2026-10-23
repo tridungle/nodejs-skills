@@ -1,6 +1,6 @@
 # Node Backend Agent Skills
 
-Agent skills for NestJS and Node.js + TypeScript backends built on the Model-Controller-Service-Repository layering, plus REST API contracts and their OpenAPI docs, TypeScript MCP servers, LLM integration, PostgreSQL, and code comments. Each skill is a plain `SKILL.md` folder under the open Agent Skills format: it follows the project's existing stack, adds no dependencies, and loads its detail files only when a task needs them.
+Agent skills for NestJS and Node.js + TypeScript backends built on the Model-Controller-Service-Repository layering, plus REST API contracts and their OpenAPI docs, TypeScript MCP servers, LLM integration, PostgreSQL, a feature delivery workflow, and code comments. Each skill is a plain `SKILL.md` folder under the open Agent Skills format: it follows the project's existing stack, adds no dependencies, and loads its detail files only when a task needs them.
 
 | Skill | Use it for |
 |---|---|
@@ -10,6 +10,7 @@ Agent skills for NestJS and Node.js + TypeScript backends built on the Model-Con
 | [mcp-server-typescript](skills/mcp-server-typescript/SKILL.md) | Building or reviewing MCP servers in TypeScript: tools, resources, schemas, errors, transports, auth, tests |
 | [llm-integration-typescript](skills/llm-integration-typescript/SKILL.md) | Adding LLM features to a Node/NestJS backend: provider gateway, prompts as code, structured output, streaming, tool calling, RAG, cost budgets, evals |
 | [postgres-database](skills/postgres-database/SKILL.md) | PostgreSQL itself: schema and types, constraints, indexes, zero-downtime migrations, EXPLAIN tuning, locking, connection pools, row-level security |
+| [feature-workflow](skills/feature-workflow/SKILL.md) | Delivering a ticket or user story end to end: sizing, design-changing questions only, plan by layer, tests first, build inside-out, verify, self-review, hand-off |
 | [code-comments](skills/code-comments/SKILL.md) | Writing, reviewing or cleaning up comments and TSDoc/JSDoc: why over what, doc blocks on public APIs, TODO hygiene |
 
 ## Install

@@ -1,0 +1,22 @@
+[
+  { "query": "implement ticket SHOP-142: customers can save multiple delivery addresses and pick a default, end to end", "should_trigger": true, "split": "train" },
+  { "query": "here is the user story for coupon codes at checkout, plan it and build it in our nest backend", "should_trigger": true, "split": "train" },
+  { "query": "take this spec for team invitations from requirements to a reviewable change with tests", "should_trigger": true, "split": "train" },
+  { "query": "before writing any code for the refunds feature, break it into slices and tell me what you need to know", "should_trigger": true, "split": "train" },
+  { "query": "build the feature from this jira description and give me a PR description at the end", "should_trigger": true, "split": "train" },
+  { "query": "we need order cancellation within 30 minutes of purchase, do it properly with acceptance criteria and tests first", "should_trigger": true, "split": "train" },
+  { "query": "implement this product requirement doc section for subscription pauses in our express service", "should_trigger": true, "split": "validation" },
+  { "query": "turn this feature request into acceptance criteria and a plan by layer, then implement it", "should_trigger": true, "split": "validation" },
+  { "query": "deliver the wishlist feature described below, ask me only what you really need", "should_trigger": true, "split": "validation" },
+  { "query": "work through this ticket end to end and tell me exactly what you verified before you call it done", "should_trigger": true, "split": "validation" },
+  { "query": "our nest controller injects the prisma client directly, move the queries into a repository", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
+  { "query": "async errors in our express 4 routes never reach the error middleware", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
+  { "query": "should the list endpoint use cursor or offset pagination", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
+  { "query": "this migration locked the orders table in production, how should it have been written", "should_trigger": false, "belongs_to": "postgres-database", "split": "train" },
+  { "query": "add TSDoc to the public methods of the billing service", "should_trigger": false, "belongs_to": "code-comments", "split": "train" },
+  { "query": "what does git rebase do compared to merge", "should_trigger": false, "split": "train" },
+  { "query": "the LLM summary endpoint keeps streaming after the client disconnects", "should_trigger": false, "belongs_to": "llm-integration-typescript", "split": "validation" },
+  { "query": "set up the global ValidationPipe so unknown fields are rejected", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "validation" },
+  { "query": "expose our order search as a tool for Claude through MCP", "should_trigger": false, "belongs_to": "mcp-server-typescript", "split": "validation" },
+  { "query": "estimate how many story points this epic is for sprint planning", "should_trigger": false, "split": "validation" }
+]

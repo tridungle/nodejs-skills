@@ -2,6 +2,8 @@
 
 Load when asked to add a resource (create, read, list, update, delete) to a Node.js service built on Express, Fastify, Hono or similar. Work through the steps in order; each ends with what must be true before moving on. Skip a step only when the user scoped it out, and say so in the summary.
 
+The process around these steps (sizing, clarifying questions, plan, tests first, self-review, hand-off) is the `feature-workflow` skill when installed; this file is the build list it uses.
+
 Before step 1, read one existing feature in the project and copy its conventions (folder layout, naming, framework, validator, ORM, error classes, test runner, module system). The project's way wins over this list wherever they differ.
 
 ## 1. Agree the contract
