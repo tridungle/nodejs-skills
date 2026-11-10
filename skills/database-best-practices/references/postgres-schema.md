@@ -1,4 +1,4 @@
-# Schema design
+# PostgreSQL: Schema design
 
 Load when creating tables, choosing column types and keys, or adding constraints.
 
@@ -37,7 +37,7 @@ Load when creating tables, choosing column types and keys, or adding constraints
 ## Common columns
 
 - `created_at timestamptz NOT NULL DEFAULT now()`, `updated_at timestamptz NOT NULL DEFAULT now()`. Maintain `updated_at` in one place: an ORM hook or a trigger, not both.
-- Optimistic locking: `version integer NOT NULL DEFAULT 0`, incremented on every update (see [concurrency-connections.md](concurrency-connections.md)).
+- Optimistic locking: `version integer NOT NULL DEFAULT 0`, incremented on every update (see [postgres-concurrency.md](postgres-concurrency.md)).
 
 ## Soft delete
 
@@ -48,7 +48,7 @@ Load when creating tables, choosing column types and keys, or adding constraints
 ## Multi-tenancy
 
 - **Shared tables with a `tenant_id` column** is the usual default: `tenant_id` is `NOT NULL`, leads every composite index used by tenant-scoped queries, and appears in foreign keys between tenant-owned tables where practical so rows cannot point across tenants.
-- Enforce isolation in two places: the repository always filters by tenant, and optionally row-level security as the backstop (see [security-rls.md](security-rls.md)).
+- Enforce isolation in two places: the repository always filters by tenant, and optionally row-level security as the backstop (see [postgres-security.md](postgres-security.md)).
 - Schema-per-tenant or database-per-tenant only for strong isolation requirements; they multiply migrations and connections.
 
 ## Naming

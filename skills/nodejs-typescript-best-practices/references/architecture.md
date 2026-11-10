@@ -51,7 +51,7 @@ Only repository implementations import the ORM or driver. An in-memory implement
 
 ## Query rules
 
-On PostgreSQL, the `postgres-database` skill (when installed) covers query plans, index choice, zero-downtime migrations, locking and pool sizing in depth.
+The `database-best-practices` skill (when installed) covers query plans, index choice, zero-downtime migrations, locking and pool sizing in depth for PostgreSQL, MongoDB and vector stores.
 
 - Every list query has a limit with a hard maximum; cursor pagination for large or growing tables.
 - No queries in loops (N+1); fetch by id list or join.

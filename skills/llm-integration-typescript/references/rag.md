@@ -14,7 +14,7 @@ Start by checking whether RAG is needed. If the source material fits comfortably
 | Retrieve, rank, assemble prompt, call model, attach citations | The service |
 | Endpoint | The controller |
 
-Use the store the project already has. Postgres with `pgvector` keeps vectors next to the data and its access rules; a dedicated vector database is a decision for scale, not a default.
+Use the store the project already has; operating it (choosing a store, embedding-model changes, filtered search, keeping the index in sync) is covered by the `database-best-practices` skill when installed. Postgres with `pgvector` keeps vectors next to the data and its access rules; a dedicated vector database is a decision for scale, not a default.
 
 ## Ingestion
 

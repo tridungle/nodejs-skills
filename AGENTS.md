@@ -2,48 +2,77 @@
 
 Rules for this repository, on top of whatever global guidance an agent already loads.
 
-## Examples in a skill are abstract, never real
+## What this repository is
 
-A skill teaches a rule; it never carries a sample of anyone's actual work. Every example in `SKILL.md` and in `references/` is a shape or a placeholder — what the sentence does, not the sentence itself.
+Agent skills for TypeScript backends: NestJS and Node.js services built on the Model-Controller-Service-Repository layering, plus the topics around them: API contracts, databases (PostgreSQL, MongoDB, vector stores), LLM integration, MCP servers, code comments and the feature delivery workflow. Every skill teaches rules an agent applies to someone else's project, so each one adapts to that project's stack instead of imposing ours.
 
-Never a real post, a real account, a real person's text, a captured run, a screenshot of one, or anything copied from the author's own published writing. Two reasons, each sufficient: that material is private and does not belong in a published skill, and a sentence printed in a skill comes back verbatim in the next run's output.
+A skill here earns its place by being specific to this stack and these layers. A general-purpose workflow that already exists elsewhere is installed, not rebuilt, unless we need rules of our own in it.
 
-## Evals measure a description, and they live outside the skill
+## Every skill keeps the run cheap
 
-A rule a skill states is proved by reading it, and a check it prescribes is proved by running it on the work in hand. Neither settles the one question reading cannot reach: whether a description fires on the prompts it should and stays quiet on the ones it should not. With forty-odd skills whose boundaries touch each other, that is decided by measurement or it is not decided at all. So evals are allowed, on these terms.
+Each installed description loads into every session, each `SKILL.md` loads on activation, and each `references/` file loads only when a task reaches it. Write for that:
 
-**A set lives where the convention puts it, inside the skill it measures.** `<skill>/evals/eval_queries.json` holds the trigger set, `<skill>/evals/evals.json` the output cases. That is what the published practice specifies and what the tooling that runs these loops looks for, and a set that travels with its skill cannot drift away from the description it was written against. Those two filenames are the entire allowance: no third file, no `files/` fixtures, nothing that executes. What an installed user gains is a few kilobytes of text that no run ever opens - the body still loads at activation, `references/` still loads on demand, and `evals/` is read by nobody but the maintainer measuring a description.
+- **Description**: at most 300 characters. What the skill covers, then `Use when …`, then the boundary with the nearest sibling where one is close ("not for …", "… belong to `other-skill`").
+- **`SKILL.md`**: the map. At most 500 lines and 5,000 words; in practice under about 150 lines. Detail goes to `references/`.
+- **Each reference**: one topic, at most 200 lines, linked from `SKILL.md` with the task that needs it, so a run opens one file, not all of them.
+- **About ten skills at most.** Past that, descriptions compete for the same requests. A new topic becomes a reference in an existing skill unless requests for it would not trigger that skill.
 
-**Run output is not repository content.** Iterations, gradings, benchmarks, transcripts, and any input file a case needs stay outside the clone, in the agent's own scratch folder. They go stale the moment a model version moves, they carry whatever the run happened to read, and a committed fixture is the exact thing the first rule of this file forbids.
+Every `SKILL.md` opens with **cost rules** that bind the agent using it: follow the project's existing libraries and conventions first; add no dependency, extension or infrastructure without asking; read only the reference the task needs; make the smallest change the request needs; no speculative abstraction.
 
-**No runner is committed.** The text-only rule holds here too: the agent writes the loop its own client needs, on its own platform, and throws it away afterwards. What is committed is the cases.
+## Shape of a skill
 
-**The cases are invented, like every other example in this repository.** No real post, no real account, no captured run, nothing from anyone's published writing. A realistic prompt means an invented path and an invented product name, not a real one.
+```text
+skills/<name>/
+  SKILL.md          # frontmatter: name (= folder), description, license, metadata.tags
+  references/*.md   # optional, one topic each
+  evals/eval_queries.json   # trigger set (see below)
+  evals/evals.json          # optional output cases
+```
 
-**A trigger set is around twenty queries, half of them negative, and the negatives are near-misses** — the prompt that belongs to the sibling skill one boundary away, not a prompt about the weather. A negative names that sibling in `belongs_to` when one owns it. The train and validation split is written into the file once and never reshuffled, because a split that moves between iterations measures itself rather than the description.
+`SKILL.md` sections, in this order where they apply: purpose in one or two sentences; cost rules; where the topic sits in the four layers (a table); numbered non-negotiables; a "pick the reference for the task" table; a review checklist whose items are reported as pass or fail with `file:line` evidence; an anti-pattern table with the fix beside each.
 
-**A set is required where the risk is**: a new skill whose description overlaps one already here, and any rewrite of a description. Everywhere else it is optional.
+Skills refer to each other **by name in backticks** (`api-design`), with "when installed", because any skill may be installed alone. Never link into another skill's `references/`.
 
-**A claim about triggering is a number or it is nothing.** Trigger rate over at least three runs per query, with the model, its effort level and the date recorded beside it: effort names do not mean the same amount of thinking on two models, and a model's default level moves between releases. "Triggers reliably" with no run behind it is exactly what this section exists to stop, and an unrun set proves no more than an unwritten one.
+## Examples are abstract, never real
 
-**Fix the category, not the keyword.** A should-trigger query that failed marks a gap in what the description covers; pasting that query's own words into the description buys that query and nothing beyond it. Choose the iteration by its validation pass rate, which is often not the last one written.
+A skill teaches a rule; it never carries a sample of anyone's actual work. Every example in `SKILL.md`, `references/` and the eval sets is a shape or an invented placeholder: invented product names, paths, tickets and data.
 
-**The loop costs real sessions** — twenty queries at three runs each is sixty of them. Ask before spending that, and never wire it into CI.
-
-`scripts/lint.py` checks the shape of what is committed: the folder carries those two filenames and nothing else, each file parses, a trigger set holds both positive and negative cases, repeats no query, labels every split `train` or `validation`, and points `belongs_to` at a real sibling rather than at the skill under test. An output case may carry `checks`, regex patterns each with the answers it must accept (`pass`) and reject (`fail`); lint compiles every pattern and runs it on both lists, so a broken check is caught offline before a run pays for it.
+Never a real post, account, customer record, person's text, captured run, or anything copied from published writing, including the sources a skill was researched from: those are read for topics, never quoted. Two reasons, each sufficient: such material is private or someone else's, and a sentence printed in a skill comes back verbatim in the next run's output.
 
 ## Text only: a skill instructs, it never ships code
 
-A skill folder holds `SKILL.md`, `references/`, and the `evals/` pair above, and nothing else. No `scripts/`, no `templates/`, no `.mjs`, `.py`, `.sh`, `.ps1`, `.html`, no fixture, no binary, no file that exists to be executed or copied into the user's project. Markdown is the format a skill ships; the two eval files are data a maintainer measures with, and no run reads them.
+A skill folder holds the files shown above and nothing else: no scripts, templates, fixtures, binaries, or files meant to be executed or copied into the user's project.
 
-The reason is where the work happens. An agent reading a skill knows its own platform, its own shell, its own language runtimes and what the user's repository already has; a file written here months ago knows none of that, and running it puts the author's code on someone else's machine. So a skill says what to check, what counts as a pass, what the thresholds are and what evidence to report — and the agent writes whatever it needs, in whatever language fits, or performs the check by reading.
+An agent reading a skill knows its own platform, shell, runtimes and the user's repository; a file written here months ago knows none of that. So a skill states what to check, what counts as a pass, the thresholds and the evidence to report, and the agent writes whatever it needs or checks by reading.
 
-This binds the wording too: a skill never prints a script for the reader to paste, never specifies a command-line interface, a flag set, a file layout for a checker, or the shape its output should take as code. A one-line shell command against a standard tool stays welcome where it is the clearest way to say what to look for; a program does not, however short. The line is what the block is for: code that is the subject being taught — what a typed error looks like in the reader's own codebase, the markup an accessible control needs, a configuration entry — is the skill's content and stays; a routine the reader is meant to run against their project is the thing this rule removes, and it is written as what to do instead.
-
-One exception, and it is about knowledge rather than convenience. `awesome-content-publisher` drives other people's live composers through a browser-automation API, and there the exact call sequence — which event, in which order, with which arguments, and what to read back before the next step — is the finding itself: it was established by running against those editors, and it stops being reproducible the moment it is paraphrased. Its browser snippets stay as code. The exception is that narrow: driving an external interface whose behaviour had to be learned by using it. It never covers a checker aimed at the reader's own project, and it ships no file either — the code sits in the reference page that explains why each step is there.
+The line is what a code block is for. Code that **is the subject being taught** stays: what a repository contract looks like, a migration statement, a configuration entry, a one-line command against a standard tool. A **routine the reader is meant to run** against their project is written as instructions instead, however short.
 
 A check that cannot be written as an instruction with a stated threshold and stated evidence is not ready to be in a skill.
 
+## Facts that go stale
+
+- Version-dependent behaviour names the version it needs ("PostgreSQL 12+", "Express 5").
+- Model ids, prices and SDK method names are never fixed in a skill; it tells the agent to read the installed version or the provider's current documentation.
+- Before stating a library or database behaviour you are unsure of, check it; correct it in the same change if it was wrong.
+
+## Evals measure a description
+
+Reading proves a rule; only measurement shows whether a description fires on the requests it should and stays quiet on the rest.
+
+- **A trigger set is written for every skill**, in `evals/eval_queries.json`: around twenty invented queries, half should-trigger and half near-miss negatives, meaning requests that belong to a sibling one boundary away, named in `belongs_to`. Each query is labelled `train` or `validation` once and never reshuffled. Add a near-miss whenever a description gains a new boundary.
+- **Running a set is optional and costs money**, one agent session per query per run. Never start a run without the repository owner's explicit go-ahead in the current conversation, and never wire it into CI.
+- **A claim about triggering is a number or it is nothing**: trigger rate over at least three runs per query, with model, effort level and date beside it. Until a set has run, say it is unrun; "triggers reliably" with no run behind it is not allowed.
+- **Fix the category, not the keyword.** A missed query marks a gap in what the description covers; pasting its words in buys that query only. Choose an iteration by its validation pass rate.
+- **No runner and no run output are committed.** The loop is written for the run and thrown away; transcripts and results stay in the agent's scratch folder.
+
+## Checks and commits
+
+`python3 scripts/lint.py` must pass before every commit. It checks frontmatter and the description length, the folder shape, size budgets, that every reference is linked and every link resolves, that sibling skills named in backticks exist, that single-language skills map their examples to other stacks, and the shape of every eval set (including `checks` regexes against their `pass` and `fail` lists). It reads what git tracks, so stage new files before running it.
+
+When adding a skill: write the folder, run lint, add a row to the README table, cross-link the siblings it borders, and check the descriptions side by side for new overlaps.
+
+One logical change per commit. The message states what changed and, for description changes, that triggering is unmeasured unless a run was made.
+
 ## Distribution is the git repository
 
-There is no plugin or extension manifest. A user clones the repository and copies or symlinks the skill folders into their agent's skills directory, as the README describes; a symlinked install updates with `git pull`. So the folder name is the public interface: renaming or removing a skill folder breaks every install that points at it, and a commit that does so says so in its message.
+There is no plugin or extension manifest. Users clone the repository and copy or symlink skill folders into their agent's skills directory, as the README describes; a symlinked install updates with `git pull`. The folder name is therefore the public interface: renaming or removing a skill folder breaks every install that points at it, and a commit that does so says so in its message.

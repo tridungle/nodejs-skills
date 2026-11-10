@@ -1,4 +1,4 @@
-# Migrations without downtime
+# PostgreSQL: Migrations without downtime
 
 Load when writing or reviewing a migration, planning a backfill, or changing a column that live code uses.
 

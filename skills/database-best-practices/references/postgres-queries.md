@@ -1,4 +1,4 @@
-# Indexes and query performance
+# PostgreSQL: Indexes and query performance
 
 Load when a query is slow, when choosing an index, or when reviewing list, search and count queries.
 
@@ -31,7 +31,7 @@ Load when a query is slow, when choosing an index, or when reviewing list, searc
 - **Trigram (`pg_trgm`) GIN** for `ILIKE '%term%'` and fuzzy search. A plain B-tree cannot serve a leading wildcard.
 - **BRIN** for huge append-only tables queried by time range.
 - Every index slows writes and uses memory: check `pg_stat_user_indexes.idx_scan` for indexes never used, and indexes that are a prefix of another, before adding more.
-- On existing tables, build with `CREATE INDEX CONCURRENTLY` (see [migrations.md](migrations.md)).
+- On existing tables, build with `CREATE INDEX CONCURRENTLY` (see [postgres-migrations.md](postgres-migrations.md)).
 
 ## Query rules
 

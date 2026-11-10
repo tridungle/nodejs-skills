@@ -12,7 +12,7 @@
   { "query": "our nest controller injects the prisma client directly, move the queries into a repository", "should_trigger": false, "belongs_to": "nestjs-best-practices", "split": "train" },
   { "query": "async errors in our express 4 routes never reach the error middleware", "should_trigger": false, "belongs_to": "nodejs-typescript-best-practices", "split": "train" },
   { "query": "should the list endpoint use cursor or offset pagination", "should_trigger": false, "belongs_to": "api-design", "split": "train" },
-  { "query": "this migration locked the orders table in production, how should it have been written", "should_trigger": false, "belongs_to": "postgres-database", "split": "train" },
+  { "query": "this migration locked the orders table in production, how should it have been written", "should_trigger": false, "belongs_to": "database-best-practices", "split": "train" },
   { "query": "add TSDoc to the public methods of the billing service", "should_trigger": false, "belongs_to": "code-comments", "split": "train" },
   { "query": "what does git rebase do compared to merge", "should_trigger": false, "split": "train" },
   { "query": "the LLM summary endpoint keeps streaming after the client disconnects", "should_trigger": false, "belongs_to": "llm-integration-typescript", "split": "validation" },

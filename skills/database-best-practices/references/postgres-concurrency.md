@@ -1,4 +1,4 @@
-# Concurrency, transactions and connections
+# PostgreSQL: Concurrency, transactions and connections
 
 Load when two requests can change the same data, when deadlocks or lock waits appear, when using Postgres as a job queue, or when sizing connection pools.
 

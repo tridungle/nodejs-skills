@@ -33,7 +33,7 @@ Rules either way:
 
 ## Query performance
 
-On PostgreSQL, the `postgres-database` skill (when installed) covers query plans, index choice, zero-downtime migrations, locking and pool sizing in depth.
+The `database-best-practices` skill (when installed) covers query plans, index choice, zero-downtime migrations, locking and pool sizing in depth for PostgreSQL, MongoDB and vector stores.
 
 - **N+1**: a loop calling the repository per item. Replace with one `findManyByIds(ids)` or an ORM include/join. Check by enabling query logging in a test and counting statements for a list of N items.
 - **Select what is used**: list endpoints select the columns the response DTO needs, not `SELECT *` with large text/JSON columns.
